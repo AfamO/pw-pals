@@ -209,4 +209,7 @@ function convertWebAppToPwa(webAppHomeFolder)
 }
 
 //Test and Run this algorithm
-convertWebAppToPwa("test-web-apps");//Note: test-web-apps is the sample test web app.//Every file is in the same folder for now. In later versions,they will be separated
+var webAppFolder=process.argv[2]
+if(webAppFolder==null)
+	return console.error('Oooops!!! Please supply the web app home folder as a commandline argument');
+convertWebAppToPwa(webAppFolder);//Note: the default test-web-apps is the sample test web app.//Every file is in the same folder for now. In later versions,they will be separated
